@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>dev.theholyonez.zatlas</id>
+
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+
+  <name>ZAtlas</name>
+  <summary>A map of a codebase you have never seen before</summary>
+
+  <developer id="eu.zsync">
+    <name>TheHolyOneZ</name>
+  </developer>
+
+  <description>
+    <p>
+      Point ZAtlas at a repository and it draws the actual shape of it: the
+      module dependency graph, every import cycle, a treemap of where the mass
+      is, which files change together, which files change constantly, what is
+      dead and what has become a god-object.
+    </p>
+    <p>
+      It reads TypeScript, JavaScript, Rust, Python and Go, and reads your git
+      history for churn, ownership and co-change coupling. Findings are ranked
+      and explainable: each one carries the evidence behind it, why it is a
+      finding, and what to do about it.
+    </p>
+    <p>
+      An import it cannot resolve is recorded with a reason and shown to you
+      rather than quietly dropped, because a dependency graph that is silently
+      wrong is worse than no graph at all.
+    </p>
+    <p>Four ways to look at the same graph:</p>
+    <ul>
+      <li>Graph — the dependency network, laid out deterministically</li>
+      <li>Treemap — where the lines of code actually are</li>
+      <li>Matrix — the dependency structure matrix, for spotting tangles</li>
+      <li>Timeline — the codebase over the last year, scrubbable and playable</li>
+    </ul>
+    <p>
+      Entirely local and entirely offline. There is no account, no telemetry and
+      no network call. It never modifies your source or your history: git is
+      read straight from the object database and nothing is ever checked out.
+    </p>
+  </description>
+
+  <launchable type="desktop-id">dev.theholyonez.zatlas.desktop</launchable>
+
+  <url type="homepage">https://zsync.eu/zatlas/</url>
+  <url type="bugtracker">https://github.com/TheHolyOneZ/ZAtlas/issues</url>
+  <url type="vcs-browser">https://github.com/TheHolyOneZ/ZAtlas</url>
+  <url type="help">https://github.com/TheHolyOneZ/ZAtlas#readme</url>
+
+  <categories>
+    <category>Development</category>
+    <category>Debugger</category>
+  </categories>
+
+  <keywords>
+    <keyword>dependency graph</keyword>
+    <keyword>codebase</keyword>
+    <keyword>architecture</keyword>
+    <keyword>imports</keyword>
+    <keyword>cycles</keyword>
+    <keyword>visualisation</keyword>
+    <keyword>static analysis</keyword>
+    <keyword>refactoring</keyword>
+  </keywords>
+
+  <screenshots>
+    <screenshot type="default">
+      <caption>The dependency graph, with density contours as ground</caption>
+      <image>https://raw.githubusercontent.com/TheHolyOneZ/ZAtlas/main/assets/screenshots/graph.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>The treemap: where the lines of code actually are</caption>
+      <image>https://raw.githubusercontent.com/TheHolyOneZ/ZAtlas/main/assets/screenshots/treemap.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>The dependency structure matrix, for spotting tangles</caption>
+      <image>https://raw.githubusercontent.com/TheHolyOneZ/ZAtlas/main/assets/screenshots/matrix.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>The timeline: a year of the codebase, scrubbable and playable</caption>
+      <image>https://raw.githubusercontent.com/TheHolyOneZ/ZAtlas/main/assets/screenshots/timeline.png</image>
+    </screenshot>
+  </screenshots>
+
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+  </supports>
+
+  <recommends>
+    <display_length compare="ge">1120</display_length>
+  </recommends>
+
+  <content_rating type="oars-1.1" />
+
+  <releases>
+    <release version="0.1.0" date="2026-09-06">
+      <description>
+        <p>First release.</p>
+      </description>
+    </release>
+  </releases>
+</component>

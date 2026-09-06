@@ -1,0 +1,71 @@
+[workspace]
+members = ["crates/zatlas-core", "crates/zatlas-cli", "src-tauri"]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+license = "GPL-3.0-or-later"
+authors = ["TheHolyOneZ"]
+repository = "https://github.com/TheHolyOneZ/ZAtlas"
+homepage = "https://zsync.eu/zatlas/"
+documentation = "https://github.com/TheHolyOneZ/ZAtlas#readme"
+readme = "README.md"
+keywords = ["dependency-graph", "codebase", "visualisation", "tree-sitter", "git"]
+categories = ["development-tools", "visualization"]
+publish = false
+
+[workspace.dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+anyhow = "1"
+regex = "1"
+toml = "0.8"
+directories = "6"
+rayon = "1"
+dashmap = "6"
+num_cpus = "1"
+ignore = "0.4"
+globset = "0.4"
+blake3 = { version = "1", features = ["rayon"] }
+petgraph = "0.8"
+rusqlite = { version = "0.32", features = ["bundled"] }
+r2d2 = "0.8"
+r2d2_sqlite = "0.25"
+tree-sitter = "0.25"
+tree-sitter-typescript = "0.23.2"
+tree-sitter-javascript = "0.25.0"
+tree-sitter-rust = "0.24.2"
+tree-sitter-python = "0.25.0"
+tree-sitter-go = "0.25.0"
+gix = { version = "0.87", default-features = false, features = [
+    "basic",
+    "max-performance-safe",
+    "auto-chain-error",
+    "sha1",
+    "sha256",
+] }
+ts-rs = "12"
+uuid = { version = "1", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+clap = { version = "4.6", features = ["derive"] }
+tempfile = "3"
+notify = "8"
+notify-debouncer-full = "0.7"
+
+[profile.dev]
+debug = "line-tables-only"
+
+[profile.dev.package."*"]
+debug = false
+
+[profile.dev.package.tree-sitter]
+opt-level = 2
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true

@@ -1,0 +1,291 @@
+@import "tailwindcss";
+
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/jetbrains-mono";
+
+@theme {
+  --font-sans: "Inter Variable", "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono Variable", "JetBrains Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+
+:root,
+html[data-theme="cartograph"] {
+  --canvas: #0b1211;
+  --surface: #111a19;
+  --surface-2: #0e1615;
+  --raised: #16211f;
+  --input: #1a2624;
+  --border: #1e2b29;
+  --border-strong: #2b3c39;
+
+  --text: #e4ece9;
+  --text-2: #93a5a1;
+  --text-3: #5d6f6b;
+
+  --accent: #2dd4bf;
+  --accent-soft: rgba(45, 212, 191, 0.14);
+  --accent-text: #04100e;
+
+
+  --sev-0: oklch(0.78 0.13 180);
+  --sev-1: oklch(0.80 0.14 140);
+  --sev-2: oklch(0.83 0.16 95);
+  --sev-3: oklch(0.76 0.18 60);
+  --sev-4: oklch(0.66 0.21 30);
+
+  --cycle: #f87171;
+  --ok: #34d399;
+  --warn: #fbbf24;
+
+  --row-hover: rgba(255, 255, 255, 0.035);
+  --row-selected: rgba(45, 212, 191, 0.1);
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+
+
+  --contour: #2dd4bf;
+
+
+  --edge: #43a99b;
+  --focus: rgba(45, 212, 191, 0.45);
+  --control: #16211f;
+  --control-hover: #1d2b28;
+  --tick: rgba(45, 212, 191, 0.55);
+}
+
+
+html[data-theme="topographic-light"] {
+  --canvas: #f7f5ef;
+  --surface: #efece3;
+  --surface-2: #f2efe7;
+  --raised: #e8e4d9;
+  --input: #e3ded1;
+  --border: #ddd7c8;
+  --border-strong: #c4bca8;
+
+  --text: #2e2b24;
+  --text-2: #6b6558;
+  --text-3: #938c7c;
+
+  --accent: #0f8b7d;
+  --accent-soft: rgba(15, 139, 125, 0.12);
+  --accent-text: #ffffff;
+
+  --sev-0: oklch(0.62 0.11 180);
+  --sev-1: oklch(0.63 0.13 140);
+  --sev-2: oklch(0.66 0.15 95);
+  --sev-3: oklch(0.60 0.18 60);
+  --sev-4: oklch(0.52 0.20 30);
+
+  --cycle: #c0392b;
+  --ok: #12805f;
+  --warn: #a86a00;
+
+  --row-hover: rgba(0, 0, 0, 0.035);
+  --row-selected: rgba(15, 139, 125, 0.1);
+  --shadow: 0 8px 24px rgba(80, 70, 50, 0.14);
+  --contour: #8a7350;
+
+  --edge: #4a7d75;
+  --focus: rgba(15, 139, 125, 0.4);
+  --control: #e8e4d9;
+  --control-hover: #ded8c8;
+  --tick: rgba(15, 139, 125, 0.6);
+}
+
+html[data-theme="slate"] {
+  --canvas: #0f1115;
+  --surface: #171a21;
+  --surface-2: #13161c;
+  --raised: #1d212a;
+  --input: #232833;
+  --border: #262c38;
+  --border-strong: #363e4e;
+
+  --text: #e6e9ef;
+  --text-2: #98a1b2;
+  --text-3: #626c7d;
+
+  --accent: #38bdf8;
+  --accent-soft: rgba(56, 189, 248, 0.14);
+  --accent-text: #08131a;
+
+  --sev-0: oklch(0.78 0.12 220);
+  --sev-1: oklch(0.80 0.13 160);
+  --sev-2: oklch(0.83 0.16 95);
+  --sev-3: oklch(0.76 0.18 55);
+  --sev-4: oklch(0.66 0.21 28);
+
+  --cycle: #f87171;
+  --ok: #34d399;
+  --warn: #fbbf24;
+
+  --row-hover: rgba(255, 255, 255, 0.035);
+  --row-selected: rgba(56, 189, 248, 0.1);
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --contour: #38bdf8;
+
+  --edge: #4a9fd0;
+  --focus: rgba(56, 189, 248, 0.45);
+  --control: #1d212a;
+  --control-hover: #272d38;
+  --tick: rgba(56, 189, 248, 0.55);
+}
+
+
+html[data-theme="contrast"] {
+  --canvas: #000000;
+  --surface: #0a0a0a;
+  --surface-2: #050505;
+  --raised: #141414;
+  --input: #1c1c1c;
+  --border: #3a3a3a;
+  --border-strong: #6a6a6a;
+
+  --text: #ffffff;
+  --text-2: #d0d0d0;
+  --text-3: #9a9a9a;
+
+  --accent: #5eead4;
+  --accent-soft: rgba(94, 234, 212, 0.2);
+  --accent-text: #000000;
+
+  --sev-0: oklch(0.88 0.14 180);
+  --sev-1: oklch(0.89 0.15 140);
+  --sev-2: oklch(0.90 0.17 95);
+  --sev-3: oklch(0.82 0.20 55);
+  --sev-4: oklch(0.72 0.24 28);
+
+  --cycle: #ff6b6b;
+  --ok: #4ade80;
+  --warn: #fcd34d;
+
+  --row-hover: rgba(255, 255, 255, 0.08);
+  --row-selected: rgba(94, 234, 212, 0.18);
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.8);
+
+
+  --contour: #7fe3d2;
+
+  --edge: #7fe3d2;
+  --focus: rgba(94, 234, 212, 0.7);
+  --control: #141414;
+  --control-hover: #242424;
+  --tick: rgba(94, 234, 212, 0.9);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+  overflow: hidden;
+}
+
+
+.mono {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-variant-ligatures: none;
+  font-variant-numeric: tabular-nums;
+}
+
+
+:where(button, a, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: var(--accent);
+}
+
+
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+::-webkit-scrollbar-track {
+  background: var(--surface-2);
+  border-left: 1px solid var(--border);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 6px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+  min-height: 32px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-3);
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:active {
+  background: var(--accent);
+  background-clip: content-box;
+}
+::-webkit-scrollbar-corner {
+  background: var(--surface-2);
+}
+
+
+[data-scroll],
+.overflow-y-auto,
+.overflow-auto {
+  overscroll-behavior: contain;
+}
+
+
+.reticle {
+  position: relative;
+}
+.reticle::before,
+.reticle::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-repeat: no-repeat;
+}
+.reticle::before {
+  background-image:
+    linear-gradient(var(--tick), var(--tick)), linear-gradient(var(--tick), var(--tick)),
+    linear-gradient(var(--tick), var(--tick)), linear-gradient(var(--tick), var(--tick));
+  background-size: 7px 1px, 1px 7px, 7px 1px, 1px 7px;
+  background-position: left top, left top, right bottom, right bottom;
+}
+.reticle::after {
+  background-image:
+    linear-gradient(var(--tick), var(--tick)), linear-gradient(var(--tick), var(--tick)),
+    linear-gradient(var(--tick), var(--tick)), linear-gradient(var(--tick), var(--tick));
+  background-size: 7px 1px, 1px 7px, 7px 1px, 1px 7px;
+  background-position: right top, right top, left bottom, left bottom;
+}
+
+
+.contour-ground {
+  background-color: var(--canvas);
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

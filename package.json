@@ -1,0 +1,74 @@
+{
+  "name": "zatlas",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A map of a codebase you have never seen before — dependency graph, cycles, churn hotspots and co-change coupling, offline",
+  "keywords": [
+    "dependency-graph",
+    "code-visualization",
+    "codebase-map",
+    "import-cycles",
+    "code-analysis",
+    "churn",
+    "tree-sitter",
+    "tauri",
+    "rust",
+    "desktop-app",
+    "linux",
+    "windows"
+  ],
+  "homepage": "https://zsync.eu/zatlas/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheHolyOneZ/ZAtlas.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TheHolyOneZ/ZAtlas/issues"
+  },
+  "author": "TheHolyOneZ",
+  "license": "GPL-3.0-or-later",
+  "type": "module",
+  "packageManager": "pnpm@10.33.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "tauri": "tauri",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.2.8",
+    "@fontsource-variable/jetbrains-mono": "^5.2.8",
+    "@tanstack/react-virtual": "^3",
+    "@tauri-apps/api": "^2",
+    "@tauri-apps/plugin-dialog": "^2",
+    "@tauri-apps/plugin-fs": "^2",
+    "@tauri-apps/plugin-opener": "^2",
+    "@tauri-apps/plugin-shell": "^2",
+    "clsx": "^2",
+    "cmdk": "^1",
+    "d3-hierarchy": "^3",
+    "lucide-react": "^1.24.0",
+    "motion": "^12",
+    "rbush": "^4",
+    "react": "^19",
+    "react-dom": "^19",
+    "zustand": "^5"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4",
+    "@tauri-apps/cli": "^2",
+    "@types/d3-hierarchy": "^3",
+    "@types/node": "^22",
+    "@types/rbush": "^4",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^4",
+    "jsdom": "^25",
+    "tailwindcss": "^4",
+    "typescript": "~5.8",
+    "vite": "^7",
+    "vitest": "^3"
+  }
+}
